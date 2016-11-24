@@ -12,6 +12,6 @@ MonoBehaviour:
   m_Name: ModConfig
   m_EditorClassIdentifier: 
   id: fnxMicrocontroller
-  title: fnxMicrocontroller
+  title: Microcontroller
   version: 0.98
-  outputFolder: C:\builds
+  outputFolder: build

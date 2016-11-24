@@ -58,7 +58,7 @@ public class Micro : MonoBehaviour {
     // Use this for initialization
     void Start()
     {
-        GetComponent<KMGameInfo>().OnLightsChange += OnLightsChange; // this calls the function OnLightsChange whenever the lights in the game go on or off
+        //GetComponent<KMGameInfo>().OnLightsChange += OnLightsChange; // this calls the function OnLightsChange whenever the lights in the game go on or off
         Init();
     }
 

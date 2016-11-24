@@ -337,7 +337,6 @@ GameObject:
   - 114: {fileID: 11431944}
   - 114: {fileID: 11438006}
   - 114: {fileID: 11434340}
-  - 114: {fileID: 114000012628328342}
   - 114: {fileID: 11450226}
   m_Layer: 0
   m_Name: Micro
@@ -1720,7 +1719,7 @@ Transform:
   m_GameObject: {fileID: 153952}
   m_LocalRotation: {x: -0.000000115202326, y: 0.7071067, z: -0.7071068, w: -0.000000115202305}
   m_LocalPosition: {x: 0.0732, y: 0.041355807, z: -0.0027}
-  m_LocalScale: {x: 0.008703624, y: 0.008703617, z: 0.008703617}
+  m_LocalScale: {x: 0.0054397658, y: 0.0054397616, z: 0.0054397616}
   m_LocalEulerAnglesHint: {x: 89.980194, y: -540, z: 0}
   m_Children: []
   m_Father: {fileID: 432274}
@@ -3052,7 +3051,7 @@ TextMesh:
   m_Font: {fileID: 12800000, guid: 1ebe1d96973a920409b439b3a0e2bb63, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
 --- !u!102 &10279272
 TextMesh:
   serializedVersion: 3
@@ -3088,13 +3087,13 @@ TextMesh:
   m_Anchor: 3
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 40
+  m_FontSize: 64
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 12800000, guid: 1ebe1d96973a920409b439b3a0e2bb63, type: 3}
   m_Color:
     serializedVersion: 2
-    rgba: 4278190080
+    rgba: 4294967295
 --- !u!111 &11106776
 Animation:
   m_ObjectHideFlags: 1
@@ -3752,17 +3751,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ShaderNames:
   - Legacy Shaders/Diffuse
---- !u!114 &114000012628328342
-MonoBehaviour:
-  m_ObjectHideFlags: 1
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 100100000}
-  m_GameObject: {fileID: 133908}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: -271661043, guid: 45b809be76fd7a3468b6f517bced6f28, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!114 &114000012731567946
 MonoBehaviour:
   m_ObjectHideFlags: 1

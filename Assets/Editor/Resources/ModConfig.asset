@@ -14,4 +14,4 @@ MonoBehaviour:
   id: fnxMicrocontroller
   title: Microcontroller
   version: 0.98
-  outputFolder: D:\Programs\Steam\steamapps\common\Keep Talking and Nobody Explodes\mods
+  outputFolder: build

@@ -14,6 +14,6 @@ MonoBehaviour:
   WorkshopPublishedFileID: 769436101
   Title: Microcontroller
   Description: 
-  PreviewImage: {fileID: 0}
+  PreviewImage: {fileID: 2800000, guid: 28b111f6c81b1474aba5e4fa092f7ea8, type: 3}
   Tags:
   - Regular Module

@@ -553,7 +553,7 @@ public class Micro : MonoBehaviour {
         {
             // audiovisual feedback on button press
             _buttonAnim.press();
-            GetComponent<KMAudio>().HandlePlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+            GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
 
             // is the solution correct?
             if (materialID == colorMap[solutionRaw[positionTranslate[LEDorder[currentLEDIndex]]]]) // <-- I told you: Lots of bookkeeping :-D
@@ -596,7 +596,7 @@ public class Micro : MonoBehaviour {
         {
             // audiovisual feedback on button press
             _buttonUpAnim.press();
-            GetComponent<KMAudio>().HandlePlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+            GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
 
             // cycle through the colors ...
             if (materialID < 6)
@@ -620,9 +620,8 @@ public class Micro : MonoBehaviour {
         // for comments see CycleDown()
         if (solved == 0)
         {
-
             _buttonDownAnim.press();
-            GetComponent<KMAudio>().HandlePlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
+            GetComponent<KMAudio>().PlayGameSoundAtTransform(KMSoundOverride.SoundEffect.ButtonPress, transform);
 
             if (materialID > 1)
             {

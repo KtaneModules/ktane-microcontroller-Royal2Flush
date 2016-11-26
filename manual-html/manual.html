@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<!--[if lt IE 7]>      <html class="no-js lt-ie9 lt-ie8 lt-ie7"> <![endif]-->
+<!--[if IE 7]>         <html class="no-js lt-ie9 lt-ie8"> <![endif]-->
+<!--[if IE 8]>         <html class="no-js lt-ie9"> <![endif]-->
+<!--[if gt IE 8]><!--> <html class="no-js"> <!--<![endif]-->
+    <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Keep Talking and Nobody Explodes v. 1</title>
+    <meta name="viewport" content="initial-scale=1"> 
+
+    <link rel="stylesheet" type="text/css" href="http://www.bombmanual.com/manual/1/html/css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="main.css">
+    <link href='http://fonts.googleapis.com/css?family=Special+Elite' rel='stylesheet' type='text/css'>
+	<link rel="icon" href="favicon.ico" type="image/png">
+	<link rel="apple-touch-icon-precomposed" href="apple-touch-icon-precomposed.png">
+	<script>
+	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+	  (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+	  m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+	  })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+	  ga('create', 'UA-48421906-2', 'auto');
+	  ga('send', 'pageview');
+
+	</script>
+</head>
+<body>
+    <div id="ManualContent">
+
+<div class="section">
+    <div class="page">
+        		<div class="page-header">
+			<span class="page-header-doc-title">Keep Talking and Nobody Explodes v. 1</span>
+			<span class="page-header-section-title">Microcontrollers</span>
+		</div>
+        <div class="page-footer absolute-footer"></div>
+        <div class="page-content">
+    	    <img src="thumb.svg" class="diagram" />
+            <h2>On the Subject of Microcontrollers</h2>
+            <p class="flavour-text">It's called "micro"-controller yet this thing in there is pretty big. Probably because it can cause a pretty big explosion...</p>
+            
+			<ol>
+				<li>Use the controller's imprinted type and its size to determine its pin configuration with the diagrams below.</li>
+				<li>The white mark on the controller indicates where the pin with the number 1 is located. The other pins are in ascending order on the side with the number 1 and then continued backwards on the other side.</li>
+				<li>Using the table below determine the correct color code for each connected element.</li>
+				<li>For each pin choose the correct element by pressing the UP and DOWN buttons and confirming your input with the OK button (the next pin will be selected automatically).</li>
+			</ol>
+			
+            <h3>Pin Configurations</h3>
+            <p>Strike (STRK) Controller:</p>
+            <div id="floatalign">
+                <img style="height: 9em; margin: 0 2em 0 2em" src="a1.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="a2.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="a3.svg"/>
+            </div>
+            <p>Diode (LEDS) Controller:</p>
+            <div id="floatalign">
+                <img style="height: 9em; margin: 0 2em 0 2em" src="b2.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="b1.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="b3.svg"/>
+            </div>
+            <p>Countdown (CNTD) Controller:</p>
+            <div id="floatalign">
+                <img style="height: 9em; margin: 0 2em 0 2em" src="c3.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="c1.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="c2.svg"/>
+            </div>
+            </br>
+            </br>
+            </br>
+            <div style="text-align: right"> continued on next page ...</div>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            </br>
+            <p>Explosion (EXPL) Controller:</p>
+            <div id="floatalign">
+                <img style="height: 9em; margin: 0 2em 0 2em" src="d1.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="d3.svg"/>
+                <img style="height: 9em; margin: 0 2em 0 2em" src="d2.svg"/>
+            </div>
+
+
+    <h3>Component Color Codes</h3>
+		<table class="repeaters-table">
+			<tr>
+				<th colspan="1" class="repeaters-spacer"></th>
+				<th>Input Voltage (VCC)</th>
+				<th>Analog Input (AIN)</th>
+				<th>Digital Input (DIN)</th>
+				<th>Pulse Width Modulation (PWM)</th>
+				<th>Reset (RST)</th>
+			</tr>
+			<tr>
+				<th>If the last digit of the controller's serial number is 1&nbsp;or&nbsp;4</th><td>Yellow</td><td>Magenta</td><td>Green</td><td>Blue</td><td>Red</td></tr>
+				<th>Otherwise, if there is a lit indicator "SIG" or a RJ-45 port</th><td>Yellow</td><td>Red</td><td>Magenta</td><td>Green</td><td>Blue</td></tr>
+				<th>Otherwise, if the bomb's serial number contains C,&nbsp;L,&nbsp;R,&nbsp;X,&nbsp;1&nbsp;or&nbsp;8</th><td>Red</td><td>Magenta</td><td>Green</td><td>Blue</td><td>Yellow</td></tr>
+				<th>Otherwise, if the second numerical digit of the controller's serial number matches the number of batteries on the bomb</th><td>Red</td><td>Blue</td><td>Yellow</td><td>Green</td><td>Magenta</td></tr>
+				<th>Otherwise</th><td>Green</td><td>Red</td><td>Yellow</td><td>Blue</td><td>Magenta</td></tr> 
+		</table>
+		</br>
+		Note: Ground (GND) is always coded with white.
+		
+        
+        </div>
+        <div class="page-footer relative-footer"></div>
+    </div>
+</div>
+
+</div>    </div>
+
+				<script src="//ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+			<script>window.jQuery || document.write('<script src="js/vendor/jquery-1.11.0.min.js"><\/script>')</script>
+	    <script src="js/main.js"></script>
+</body>
+</html>

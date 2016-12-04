@@ -67,6 +67,15 @@ public class Micro : MonoBehaviour {
         Debug.Log("fnxMicro: started Init");
         solved = 0;
 
+        //---------------------------------------------
+        // set all LEDS to black material
+        //---------------------------------------------
+
+        foreach (GameObject led in LEDS)
+        {
+            led.transform.Find("Plane.001").gameObject.GetComponent<Renderer>().material = LEDMaterials[0];
+        }
+
         //------------------------------------------------------------
         // determine the correct distances for translation of the dot
         //------------------------------------------------------------

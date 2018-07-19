@@ -1,5 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections.Generic;
+using System.Collections;
 using Newtonsoft.Json;
 using System;
 using System.IO;
@@ -52,7 +53,7 @@ public class Micro : MonoBehaviour {
 	private int[] positionTranslate; // which number in the datasheet is which index of the LEDs
 
     private int solved;
-
+	private int StrikeCount = 0;
 
 
     // Use this for initialization
@@ -587,6 +588,7 @@ public class Micro : MonoBehaviour {
             else // solution incorrect
             {
                 GetComponent<KMBombModule>().HandleStrike();
+				StrikeCount++;
                 // In case we get a strike when we shouldn't: Ingame debugging:
                 //DebugText.text = "";
                 //DebugText.text += (" LED " + LEDorder[currentLEDIndex].ToString() + "\n");
@@ -672,4 +674,56 @@ public class Micro : MonoBehaviour {
             }   
         }
     }
+
+	private static readonly string[] _colors = { "white", "red", "yellow", "magenta", "blue", "green" };
+	private int currentIndex = 0;
+
+	private IEnumerator ProcessTwitchCommand(string command)
+	{
+		var commands = command.ToLowerInvariant().Trim().Split(new[] { ' ' }, StringSplitOptions.RemoveEmptyEntries);
+
+		if (commands.Length == 2 && commands[0] == "set")
+		{
+			int colorIndex = Array.IndexOf(_colors, commands[1]);
+			if (colorIndex > -1)
+			{
+				yield return null;
+
+				while (currentIndex != colorIndex)
+				{
+					yield return buttonUp;
+					yield return null;
+					yield return buttonUp;
+					currentIndex = (currentIndex + 1) % 6;
+					yield return new WaitForSeconds(0.1f);
+				}
+
+
+				int lastStrikeCount = StrikeCount;
+
+				yield return buttonOK;
+				yield return null;
+				yield return buttonOK;
+				yield return new WaitForSeconds(0.1f);
+
+				if (lastStrikeCount == StrikeCount)
+				{
+					currentIndex = 0;
+				}
+			}
+		}
+		else if (commands.Length == 1 && commands[0] == "cycle")
+		{
+			yield return null;
+
+			for (int i = 0; i < 6; i++)
+			{
+				yield return buttonUp;
+				yield return null;
+				yield return buttonUp;
+				yield return new WaitForSeconds(0.2f);
+			}
+		}
+		else yield break;
+	}
 }
